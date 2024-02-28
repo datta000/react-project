@@ -2,13 +2,17 @@ import { useState } from 'react'
 import Test from './Test.jsx'
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  let [count, setCount] = useState(1)
+  const addValue = () =>{
+    count = count * 2
+    setCount(count)
+  }
   return (
     <>
     <h1>
-      React what
+      React is counting onclick {count}
     </h1>
+    <button onClick={addValue}>ritaban</button>
       <Test/>
     </>
   )
