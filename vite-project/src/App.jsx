@@ -3,8 +3,12 @@ import Test from './Test.jsx'
 
 function App() {
   let [count, setCount] = useState(1)
-  const addValue = () =>{
+  const doubleValue = () =>{
     count = count * 2
+    setCount(count)
+  }
+  const halfValue = () =>{
+    count = count / 2
     setCount(count)
   }
   return (
@@ -12,7 +16,8 @@ function App() {
     <h1>
       React is counting onclick {count}
     </h1>
-    <button onClick={addValue}>ritaban</button>
+    <button onClick={doubleValue}>double it</button>
+    <button onClick={halfValue}>half it</button>
       <Test/>
     </>
   )
